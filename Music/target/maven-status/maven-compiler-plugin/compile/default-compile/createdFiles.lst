@@ -1,0 +1,5 @@
+Vista\NewMain.class
+Modelo\Clases\Cancion.class
+Modelo\Persistencia\DbConnection.class
+Controlador\Controller.class
+Modelo\Persistencia\CRUD.class
