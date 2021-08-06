@@ -13,14 +13,19 @@ public class MusicMain {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws SQLException {
-        //Controller.registrarCancion("El Condor Herido", "Diomedez Diaz", "Vallenato");
-        //Controller.borrarCancion(5);
+    public static void main(String[] args) throws SQLException {        
         for (Cancion value : Controller.listarCanciones()) {
             System.out.println(value);
         }
+        
+        //Controller.registrarCancion("La vaca lola", "Canticuentos", "Infantil");
+        //Controller.actualizarCancion(6,"La vaca lola", "Canticuentos", "Ronda");
         //System.out.println(Controller.obtenerCancion(4));
-        //Controller.actualizarCancion(4, "El Poblado", "Crissin", "Reggaeton");
+        //Controller.borrarCancion(4);
+        
+        for (Cancion value : Controller.listarCanciones()) {
+            System.out.println(value);
+        }
     }
     
 }

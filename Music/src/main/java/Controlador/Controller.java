@@ -65,7 +65,7 @@ public abstract class Controller {
         CRUD.setConnection(DbConnection.ConexionBD());
         String Sentencia = "DELETE FROM `Cancion` WHERE `id`='" + id + "';";
         if (CRUD.setAutoCommitBD(false)) {
-            if (CRUD.actualizarBD(Sentencia)) {
+            if (CRUD.borrarBD(Sentencia)) {
                 CRUD.commitBD();
                 CRUD.cerrarConexion();
                 return true;
@@ -82,7 +82,7 @@ public abstract class Controller {
 
     public static Cancion obtenerCancion(int id) {
         CRUD.setConnection(DbConnection.ConexionBD());
-        String sql = "select * from Cancion where id=" + id + "";
+        String sql = "select * from Cancion where id=" + id + ";";
         ResultSet rs = CRUD.consultarBD(sql);
         Cancion c1 = new Cancion();
         try {
