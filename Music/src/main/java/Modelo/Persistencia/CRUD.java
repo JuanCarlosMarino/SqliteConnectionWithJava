@@ -16,7 +16,8 @@ public abstract class CRUD {
     public static Connection con;
     public static Statement stmt = null;
     public static ResultSet rs = null;
-
+    
+    //Asigna la conexión
     public static Connection setConnection(Connection connection) {
         CRUD.con = connection;
         return connection;

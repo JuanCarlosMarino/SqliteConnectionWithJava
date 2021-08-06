@@ -64,5 +64,4 @@ public class Cancion {
         return "Cancion{" + "ID=" + ID + ", nombre=" + nombre + ", artista=" + artista + ", genero=" + genero + '}';
     }  
     
-    
 }

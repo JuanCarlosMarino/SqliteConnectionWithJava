@@ -1,4 +1,4 @@
-Vista\NewMain.class
+Vista\MusicMain.class
 Modelo\Clases\Cancion.class
 Modelo\Persistencia\DbConnection.class
 Controlador\Controller.class

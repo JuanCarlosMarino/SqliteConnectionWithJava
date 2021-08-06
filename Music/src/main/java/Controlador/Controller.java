@@ -99,6 +99,7 @@ public abstract class Controller {
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
+            return null;
         }
         return c1;
     }
@@ -110,8 +111,9 @@ public abstract class Controller {
             String sql = "select * from Cancion";
 
             ResultSet rs = CRUD.consultarBD(sql);
-            Cancion c1 = new Cancion();
+            
             while (rs.next()) {
+                Cancion c1 = new Cancion();
                 c1.setID(rs.getInt("ID"));
                 c1.setNombre(rs.getString("nombre"));
                 c1.setArtista(rs.getString("artista"));
@@ -122,7 +124,6 @@ public abstract class Controller {
         } catch (SQLException ex) {
             System.out.println(ex);
         } finally {
-
             CRUD.cerrarConexion();
         }
 
